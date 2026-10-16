@@ -1,5 +1,7 @@
 # DEVIL Cyber Intelligence — Command Center
-
+<p align="center">
+  <img src="Untitled.png" alt="DEVIL-KREPOST Cyber Intelligence" width="100%">
+</p>
 **Local-first threat-intelligence dashboard · GeoINT Atlas · lightweight Linux observability**
 **Current release: v3.1 · Python 3.10+ · SQLite · HTML/CSS/JavaScript · no pip dependencies**
 
