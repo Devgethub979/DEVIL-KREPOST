@@ -1,0 +1,51 @@
+# Sensitive runtime state — NEVER commit production customer/network data
+.env
+.env.*
+!.env.example
+*secret*
+*credential*
+*password*
+*.pem
+*.key
+*.p12
+*.pfx
+*.ovpn
+id_rsa*
+id_ed25519*
+*htpasswd*
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+*.db-journal
+*.db-wal
+*.db-shm
+*.csv
+*.csv.gz
+*.gz
+*.log
+*.pcap
+*.pcapng
+*.jsonl
+*.bak
+*.backup
+*.new
+*.swp
+# Runtime data is created separately; data/ is never part of source
+/data/
+/reports/
+/logs/
+/backups/
+# Python/editor
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+# Project artifacts
+*.zip
+*.tar.gz

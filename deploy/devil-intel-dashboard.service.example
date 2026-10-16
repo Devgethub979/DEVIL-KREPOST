@@ -1,0 +1,22 @@
+[Unit]
+Description=DEVIL Cyber Intelligence Dashboard (local-only)
+After=network.target
+
+[Service]
+Type=simple
+User=devil
+Group=devil
+WorkingDirectory=/opt/devil-intel
+Environment=DEVIL_DATA_DIR=/opt/devil-intel/data
+Environment=DEVIL_PORT=8765
+ExecStart=/usr/bin/python3 -u /opt/devil-intel/dashboard.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/tmp
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+name: Python tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile application and helpers
+        run: python -m py_compile dashboard.py tools/geo_enrich.py tools/make_demo_data.py
+      - name: Run offline unit tests
+        run: python -m unittest discover -s tests -v
